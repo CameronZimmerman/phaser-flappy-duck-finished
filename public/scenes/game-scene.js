@@ -27,7 +27,7 @@ export class GameScene extends Phaser.Scene {
       this.scoreText
     }
   preload() {
-      this.load.image("background", "assets/space-background.jpg")
+      this.load.image("background", "assets/background.png")
       //spritesheets are a large image that contain all the necessary frames for an animation 
       this.load.spritesheet(
         //reference to this spritesheet
@@ -52,9 +52,7 @@ export class GameScene extends Phaser.Scene {
     
   create() {
     const background = this.add.image(480, 640, "background")
-    //scale of our game object based off of original size (0.1 -> 10% 1.0 -> 100%)
-    background.setScale(0.4)
-    background.alpha = 0.3
+    background.alpha = 0.5
     //sprites are static or animated image gameObjects that can have input and physics associated with them
     this.ground = this.add.sprite(
       480,
@@ -90,8 +88,8 @@ export class GameScene extends Phaser.Scene {
     this.player.setDepth(2)
     this.ground.setDepth(1)
     //a container is a gameObject that is comprised of multiple gameObjects. The container is the parent and all children are displayed in reference to the container
-    const pipeContainerA = this.createPipeContainer(0, 1520)
-    const pipeContainerB = this.createPipeContainer(0, 2080)
+    const pipeContainerA = this.createPipeContainer(1520)
+    const pipeContainerB = this.createPipeContainer(2080)
     // a group is simply a way to list and associate gameObjects. Like a glorified array
     this.pipeGroup = this.add.group()
     this.pipeGroup.add(pipeContainerA)
