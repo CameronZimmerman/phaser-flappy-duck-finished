@@ -22,7 +22,8 @@ const config = {
     }
   },
   //optimize rendering for pixle art
-  pixleArt: true
+  pixelArt: true,
+  autoCenter: true
 }
 
 //Game class extends from Phasers own Game class
@@ -34,5 +35,5 @@ export class FloatyShipGame extends Phaser.Game {
 
 //initialize our Game instance on page load
 window.onload = () => {
-  let game = new FloatyShipGame(config)
+  new FloatyShipGame(config)
 }

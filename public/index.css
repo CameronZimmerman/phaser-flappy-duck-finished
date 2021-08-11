@@ -4,7 +4,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow:hidden;
-  background-color: lightgray;
+  background-color: rgb(37, 37, 37);
   /* when using lower resolution graphics we want the canvas to display our images crisply with no anti aliasing/ blurring*/
   image-rendering: optimizeSpeed;              /* Older versions of FF */
   image-rendering: -moz-crisp-edges;           /* FF 6.0+ */
@@ -13,8 +13,4 @@ body, html {
   image-rendering: crisp-edges;                /* Possible future browsers. */
   -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
   image-rendering: pixelated;                  
-}
-body {
-  display: flex;
-  justify-content: center;
 }
