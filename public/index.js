@@ -10,6 +10,7 @@ const config = {
   scale: {
     mode: Phaser.Scale.FIT,
     //width and height of our game view
+    //apparent size of game is 192 X 256 but we scale all of our assets up 
     width: 960,
     height: 1280,
 },
@@ -21,13 +22,13 @@ const config = {
       debug: false
     }
   },
-  //optimize rendering for pixle art
+  //optimize rendering for pixel art
   pixelArt: true,
   autoCenter: true
 }
 
 //Game class extends from Phasers own Game class
-export class FloatyShipGame extends Phaser.Game {
+export class FlappyDuck extends Phaser.Game {
   constructor(config) {
     super(config)
   }
@@ -35,5 +36,5 @@ export class FloatyShipGame extends Phaser.Game {
 
 //initialize our Game instance on page load
 window.onload = () => {
-  new FloatyShipGame(config)
+  new FlappyDuck(config)
 }
