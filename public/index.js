@@ -1,4 +1,4 @@
-//phaser projects are usually comprised of seperate scenes that the game instance loads based on the games current status
+//phaser projects are usually comprised of separate scenes that the game instance loads based on the games current status
 import { StartScreen } from "./scenes/start-screen.js"
 import {GameScene} from "./scenes/game-scene.js"
 import {GameOverScreen} from './scenes/game-over.js'
